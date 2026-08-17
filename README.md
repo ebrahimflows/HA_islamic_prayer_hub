@@ -35,6 +35,26 @@ At prayer time Prayer Hub can:
 > [!IMPORTANT]
 > Prayer Hub is a community custom integration, not an official Home Assistant integration. Test it before relying on it.
 
+## 📸 Screenshots
+
+### 🏠 Prayer Hub dashboard card
+
+The compact Prayer Hub card shows the upcoming prayer and prayer time directly on your Home Assistant dashboard.
+
+![Prayer Hub dashboard card](brand/prayer-card.png)
+
+### 🌅 Fajr Prayer Mode
+
+Prayer Hub uses a dedicated Fajr theme and can play a separate Fajr Adhan video.
+
+![Prayer Hub Fajr display](brand/fajr-display.png)
+
+### 🌇 Maghrib Prayer Mode
+
+Each prayer has its own visual theme, Qur'an reminder and duʿā.
+
+![Prayer Hub Maghrib display](brand/maghrib-display.png)
+
 ## 📋 Requirements
 
 Prayer Hub currently expects:
@@ -47,6 +67,24 @@ Prayer Hub currently expects:
 6. Internet access from the tablet for the embedded YouTube adhan
 
 The TV and lights are configured during setup; use the entities appropriate to your own home.
+
+## 🚀 Installation overview
+
+Prayer Hub relies on **London Unified Prayer Times (LUPT)** for its prayer timetable. For a new installation, follow these steps in order:
+
+**1. 🕰️ Install LUPT**  
+↓  
+**2. 🕌 Configure your prayer timetable in LUPT**  
+↓  
+**3. 📦 Install Prayer Hub**  
+↓  
+**4. ⚙️ Configure Prayer Hub**  
+↓  
+**5. 🧪 Test Prayer Hub**  
+↓  
+**6. 🖥️ Add the Prayer Hub card to your dashboard**
+
+The sections below walk through each step.
 
 ## 🕰️ Prayer-time source: LUPT
 
@@ -83,7 +121,7 @@ This is the easiest method once this repository is public on GitHub.
 4. Select **Custom repositories**.
 5. Paste this repository URL:
 
-   `https://github.com/ebrahimflows/HA_islamic_prayer_hub`
+   `https://github.com/YOUR_GITHUB_USERNAME/prayer-hub`
 
 6. Choose **Integration**.
 7. Select **Add**.
