@@ -1,0 +1,22 @@
+start:
+  name: Start Prayer Hub
+  description: Run Prayer Hub manually for a named prayer.
+  fields:
+    prayer_name:
+      name: Prayer name
+      description: Name shown on the tablet.
+      required: true
+      example: Maghrib
+      selector:
+        text:
+    prayer_time:
+      name: Prayer time
+      description: Time shown on the tablet.
+      required: false
+      example: "19:47"
+      selector:
+        text:
+
+stop:
+  name: Stop Prayer Hub
+  description: Restore the previous TV mute state immediately.

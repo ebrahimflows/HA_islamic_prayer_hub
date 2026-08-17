@@ -1,0 +1,14 @@
+# Optional example for users who already use Bubble Card.
+# Entity IDs may differ if Home Assistant adds suffixes.
+
+type: custom:bubble-card
+card_type: button
+button_type: state
+entity: sensor.prayer_hub_next_prayer
+name: PRAYER
+icon: mdi:mosque
+show_state: true
+scrolling_effect: false
+button_action:
+  tap_action:
+    action: more-info

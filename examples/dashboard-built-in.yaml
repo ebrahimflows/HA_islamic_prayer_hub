@@ -1,0 +1,14 @@
+type: entities
+title: Prayer Hub
+show_header_toggle: false
+entities:
+  - entity: sensor.prayer_hub_current_prayer
+    name: Current Prayer
+  - entity: sensor.prayer_hub_next_prayer
+    name: Next Prayer
+  - entity: sensor.prayer_hub_next_prayer_time
+    name: Next Prayer Time
+  - entity: sensor.prayer_hub_next_prayer_countdown
+    name: Countdown
+  - entity: sensor.prayer_hub_islamic_date
+    name: Islamic Date

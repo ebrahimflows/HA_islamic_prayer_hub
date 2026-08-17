@@ -1,0 +1,31 @@
+{
+  "title": "Prayer Hub",
+  "config": {
+    "abort": {
+      "already_configured": "Prayer Hub is already configured.",
+      "lupt_not_found": "No LUPT state entity was found. Make sure London Unified Prayer Times is loaded, then restart Home Assistant."
+    },
+    "step": {
+      "user": {
+        "title": "Set up Prayer Hub v2.0",
+        "description": "Prayer Hub found your LUPT entity. Select the TV, Fire tablet and individual lights allowed to pulse.",
+        "data": {
+          "name": "Name",
+          "lupt_entity": "London Unified Prayer Times entity",
+          "tv_entity": "TV media player",
+          "tablet_screen_entity": "Fire tablet screen switch",
+          "fully_kiosk_device_id": "Fully Kiosk device ID",
+          "home_assistant_url": "Home Assistant base URL",
+          "dashboard_return_path": "Tablet dashboard return path",
+          "light_entities": "Individual lights allowed to pulse",
+          "video_id": "Regular azaan YouTube video ID",
+          "volume": "Tablet video volume",
+          "countdown": "Countdown seconds",
+          "fallback_seconds": "Safety return timeout",
+          "automatic": "Run automatically when LUPT prayer state changes",
+          "fajr_video_id": "Fajr azaan YouTube video ID"
+        }
+      }
+    }
+  }
+}

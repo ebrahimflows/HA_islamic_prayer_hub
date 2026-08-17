@@ -1,0 +1,4 @@
+action: prayer_hub.start
+data:
+  prayer_name: Test
+  prayer_time: "19:30"
