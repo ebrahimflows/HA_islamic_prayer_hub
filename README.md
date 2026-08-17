@@ -27,23 +27,13 @@ At prayer time Prayer Hub can:
 - 🌙 display the prayer name in English and Arabic;
 - 📅 display the Islamic date from LUPT;
 - 📖 rotate locally bundled Qur'an reminders and Qur'anic du'a;
-- 🔊 play a YouTube azaan full-screen;
-- 🌅 use a separate Fajr azaan video;
+- 🔊 play a YouTube adhan full-screen;
+- 🌅 use a separate Fajr adhan video;
 - ↩️ return the tablet to your chosen Home Assistant dashboard;
 - 📡 expose sensors for current prayer, next prayer, next prayer time, countdown, Islamic date and last Prayer Hub run.
 
 > [!IMPORTANT]
 > Prayer Hub is a community custom integration, not an official Home Assistant integration. Test it before relying on it.
-
-## 📸 Screenshots
-
-Add your own screenshots to the repository after publishing, for example:
-
-- `docs/prayer-card.png`
-- `docs/fajr-display.png`
-- `docs/maghrib-display.png`
-
-Then reference them here with normal Markdown image links.
 
 ## 📋 Requirements
 
@@ -54,7 +44,7 @@ Prayer Hub currently expects:
 3. **Fully Kiosk Browser** integrated with Home Assistant
 4. A Home Assistant `media_player` entity if you want TV muting
 5. One or more Home Assistant `light` entities if you want the light-pulse notification
-6. Internet access from the tablet for the embedded YouTube azaan
+6. Internet access from the tablet for the embedded YouTube adhan
 
 The TV and lights are configured during setup; use the entities appropriate to your own home.
 
@@ -93,7 +83,7 @@ This is the easiest method once this repository is public on GitHub.
 4. Select **Custom repositories**.
 5. Paste this repository URL:
 
-   `https://github.com/YOUR_GITHUB_USERNAME/prayer-hub`
+   `https://github.com/ebrahimflows/HA_islamic_prayer_hub`
 
 6. Choose **Integration**.
 7. Select **Add**.
@@ -139,7 +129,7 @@ Prayer Hub detects LUPT entities automatically. A typical entity is:
 
 ### 📺 TV media player
 
-Choose the TV/media-player entity you want Prayer Hub to mute during the azaan.
+Choose the TV/media-player entity you want Prayer Hub to mute during the adhan.
 
 Example:
 
@@ -181,7 +171,7 @@ Prayer Hub attempts to prefill Home Assistant's configured internal or external 
 
 ### ↩️ Dashboard return path
 
-This is where the tablet returns after the azaan.
+This is where the tablet returns after the adhan.
 
 Examples:
 
@@ -199,7 +189,7 @@ Prayer Hub records only selected lights that are already on, pulses those lights
 
 Lights that were off are left off.
 
-### 🔊 Regular azaan YouTube video ID
+### 🔊 Regular adhan YouTube video ID
 
 Default:
 
@@ -207,13 +197,13 @@ Default:
 
 This is used for Dhuhr, Asr, Maghrib and Isha.
 
-### 🌅 Fajr azaan YouTube video ID
+### 🌅 Fajr adhan YouTube video ID
 
 Default:
 
 `Yazp1Nz-eBE`
 
-Fajr can use a different azaan. If no Fajr-specific video is configured, Prayer Hub falls back to the regular video.
+Fajr can use a different adhan. If no Fajr-specific video is configured, Prayer Hub falls back to the regular video.
 
 ### 🔉 Volume
 
