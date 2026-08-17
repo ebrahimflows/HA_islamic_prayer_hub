@@ -15,8 +15,8 @@
   ],
   "requirements": [],
   "codeowners": [
-    "@YOUR_GITHUB_USERNAME"
+    "@ebrahimflows"
   ],
-  "documentation": "https://github.com/YOUR_GITHUB_USERNAME/prayer-hub",
-  "issue_tracker": "https://github.com/YOUR_GITHUB_USERNAME/prayer-hub/issues"
+  "documentation": "https://github.com/ebrahimflows/prayer-hub",
+  "issue_tracker": "https://github.com/ebrahimflows/prayer-hub/issues"
 }
