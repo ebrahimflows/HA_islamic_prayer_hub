@@ -55,12 +55,6 @@ Each prayer has its own visual theme, Qur'an reminder and duʿā.
 
 ![Prayer Hub Maghrib display](brand/maghrib-display.png)
 
-## 🎥 Prayer Hub in action
-
-See Prayer Hub automatically transform the Home Assistant dashboard into a prayer display, play the Adhan, and return to the dashboard afterwards.
-
-[▶️ Watch the Prayer Hub demo](brand/prayer-hub-demo-github.mp4) 
-
 ## 📋 Requirements
 
 Prayer Hub currently expects:
@@ -423,70 +417,6 @@ Because Prayer Hub depends on several separate projects and services, future cha
 - YouTube embedding/playback
 
 If the project is no longer updated, users can continue using a compatible release, fork the repository, or maintain their own version.
-
-
-## 🍴 Publishing your own fork
-
-If you fork or clone this repository:
-
-1. Replace every occurrence of:
-
-   `YOUR_GITHUB_USERNAME`
-
-   with your GitHub username.
-
-2. Update `custom_components/prayer_hub/manifest.json`.
-3. Add a GitHub repository description.
-4. Add repository topics such as:
-
-   `home-assistant`, `hacs`, `prayer-times`, `fully-kiosk`, `islamic`, `home-automation`
-
-5. Enable GitHub Issues.
-6. Push the repository.
-7. Check the **HACS validation** and **Hassfest** workflows.
-8. Create a GitHub **Release** (not only a tag), for example:
-
-   `v2.3.2`
-
-## 🐙 Creating the GitHub repository
-
-If you are publishing this package for the first time:
-
-1. On GitHub, click **New repository**.
-2. Name it:
-
-   `prayer-hub`
-
-3. Set it to **Public** if you want other people to install it through HACS.
-4. Do not initialise it with another README or licence; this package already includes them.
-5. Create the repository.
-6. Extract this release package locally.
-7. Upload the **contents** of the repository package so the root of GitHub contains:
-
-```text
-.github/
-brand/
-custom_components/
-examples/
-.gitignore
-CHANGELOG.md
-CONTRIBUTING.md
-hacs.json
-LICENSE
-README.md
-SECURITY.md
-```
-
-Do not upload everything inside an extra `prayer-hub/` directory.
-
-8. Edit the two placeholder URLs in `manifest.json`.
-9. Commit the changes.
-10. Wait for GitHub Actions to finish.
-11. Open **Releases → Draft a new release**.
-12. Tag the release `v2.3.2`.
-13. Publish it.
-
-Other users can then install the repository through HACS as a custom integration.
 
 ## 🧩 HACS distribution
 
