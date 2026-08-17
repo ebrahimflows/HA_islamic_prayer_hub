@@ -1,4 +1,4 @@
-# Prayer Hub for Home Assistant
+# 🕌 Islamic Prayer Hub for Home Assistant 🕋
 
 Prayer Hub is a Home Assistant custom integration that turns a wall-mounted Fully Kiosk tablet into a prayer-time display while coordinating your TV and selected lights.
 
@@ -6,7 +6,7 @@ It uses **London Unified Prayer Times (LUPT)** as its timetable source.
 
 
 > [!NOTE]
-> ## Project status — stable community release
+> ## 🧭 Project status — stable community release
 >
 > Prayer Hub was originally created for a personal Home Assistant setup and is being shared so others can use or adapt it.
 >
@@ -18,24 +18,24 @@ It uses **London Unified Prayer Times (LUPT)** as its timetable source.
 
 At prayer time Prayer Hub can:
 
-- detect Fajr, Dhuhr/Zuhr, Asr, Maghrib and Isha from LUPT;
-- mute a configured TV and restore its previous mute state afterwards;
-- pulse only lights that were already on;
-- restore each light's previous brightness and active colour mode;
-- wake a Fully Kiosk tablet;
-- show a prayer-specific landscape theme;
-- display the prayer name in English and Arabic;
-- display the Islamic date from LUPT;
-- rotate locally bundled Qur'an reminders and Qur'anic du'a;
-- play a YouTube azaan full-screen;
-- use a separate Fajr azaan video;
-- return the tablet to your chosen Home Assistant dashboard;
-- expose sensors for current prayer, next prayer, next prayer time, countdown, Islamic date and last Prayer Hub run.
+- 🕌 detect Fajr, Dhuhr/Zuhr, Asr, Maghrib and Isha from LUPT;
+- 📺 mute a configured TV and restore its previous mute state afterwards;
+- 💡 pulse only lights that were already on;
+- 🎚️ restore each light's previous brightness and active colour mode;
+- 📱 wake a Fully Kiosk tablet;
+- 🎨 show a prayer-specific landscape theme;
+- 🌙 display the prayer name in English and Arabic;
+- 📅 display the Islamic date from LUPT;
+- 📖 rotate locally bundled Qur'an reminders and Qur'anic du'a;
+- 🔊 play a YouTube azaan full-screen;
+- 🌅 use a separate Fajr azaan video;
+- ↩️ return the tablet to your chosen Home Assistant dashboard;
+- 📡 expose sensors for current prayer, next prayer, next prayer time, countdown, Islamic date and last Prayer Hub run.
 
 > [!IMPORTANT]
 > Prayer Hub is a community custom integration, not an official Home Assistant integration. Test it before relying on it.
 
-## Screenshots
+## 📸 Screenshots
 
 Add your own screenshots to the repository after publishing, for example:
 
@@ -45,7 +45,7 @@ Add your own screenshots to the repository after publishing, for example:
 
 Then reference them here with normal Markdown image links.
 
-## Requirements
+## 📋 Requirements
 
 Prayer Hub currently expects:
 
@@ -58,7 +58,7 @@ Prayer Hub currently expects:
 
 The TV and lights are configured during setup; use the entities appropriate to your own home.
 
-## Prayer-time source: LUPT
+## 🕰️ Prayer-time source: LUPT
 
 Prayer Hub currently uses the `homeassistant-lupt` custom integration:
 
@@ -72,7 +72,7 @@ For the East London Mosque / London Unified Prayer Timetable source, LUPT users 
 
 LUPT stores prayer timestamps as timezone-aware values. Prayer Hub converts scheduled timestamps using Home Assistant's local timezone, so British Summer Time / Greenwich Mean Time changes are handled automatically when Home Assistant is configured for `Europe/London`.
 
-### Asr selection
+### 🌤️ Asr selection
 
 LUPT offers both Asr methods:
 
@@ -81,9 +81,9 @@ LUPT offers both Asr methods:
 
 Choose the method that matches the timetable you intend to follow.
 
-## Installation
+## 📦 Installation
 
-### Option A — HACS custom repository
+### 🛍️ Option A — HACS custom repository
 
 This is the easiest method once this repository is public on GitHub.
 
@@ -104,7 +104,7 @@ This is the easiest method once this repository is public on GitHub.
 
 HACS installs integrations into Home Assistant's `custom_components` directory.
 
-### Option B — Manual installation
+### 📁 Option B — Manual installation
 
 1. Download the latest GitHub release ZIP.
 2. Extract it.
@@ -127,17 +127,17 @@ HACS installs integrations into Home Assistant's `custom_components` directory.
 5. Restart Home Assistant.
 6. Go to **Settings → Devices & services → Add integration → Prayer Hub**.
 
-## Prayer Hub setup
+## ⚙️ Prayer Hub setup
 
 During setup Prayer Hub asks for:
 
-### London Unified Prayer Times entity
+### 🕌 London Unified Prayer Times entity
 
 Prayer Hub detects LUPT entities automatically. A typical entity is:
 
 `lupt.lupt`
 
-### TV media player
+### 📺 TV media player
 
 Choose the TV/media-player entity you want Prayer Hub to mute during the azaan.
 
@@ -145,7 +145,7 @@ Example:
 
 `media_player.living_room_tv`
 
-### Fire tablet screen switch
+### 📱 Fire tablet screen switch
 
 Choose the Fully Kiosk screen switch for your tablet.
 
@@ -153,7 +153,7 @@ Example:
 
 `switch.wall_tablet_screen`
 
-### Fully Kiosk device ID
+### 🪪 Fully Kiosk device ID
 
 Prayer Hub uses Fully Kiosk's `load_url` action.
 
@@ -165,7 +165,7 @@ To find the device ID:
 4. Switch the action editor to YAML mode.
 5. Copy the generated `device_id`.
 
-### Home Assistant base URL
+### 🏠 Home Assistant base URL
 
 Use a URL the tablet itself can reach.
 
@@ -179,7 +179,7 @@ or
 
 Prayer Hub attempts to prefill Home Assistant's configured internal or external URL where available.
 
-### Dashboard return path
+### ↩️ Dashboard return path
 
 This is where the tablet returns after the azaan.
 
@@ -191,7 +191,7 @@ Examples:
 
 `/dashboard-tablet/home`
 
-### Lights allowed to pulse
+### 💡 Lights allowed to pulse
 
 Select **individual lights**, not helper groups, where possible.
 
@@ -199,7 +199,7 @@ Prayer Hub records only selected lights that are already on, pulses those lights
 
 Lights that were off are left off.
 
-### Regular azaan YouTube video ID
+### 🔊 Regular azaan YouTube video ID
 
 Default:
 
@@ -207,7 +207,7 @@ Default:
 
 This is used for Dhuhr, Asr, Maghrib and Isha.
 
-### Fajr azaan YouTube video ID
+### 🌅 Fajr azaan YouTube video ID
 
 Default:
 
@@ -215,25 +215,25 @@ Default:
 
 Fajr can use a different azaan. If no Fajr-specific video is configured, Prayer Hub falls back to the regular video.
 
-### Volume
+### 🔉 Volume
 
 YouTube player volume from 0 to 100.
 
 Default: `85`
 
-### Countdown
+### ⏳ Countdown
 
 Seconds shown before playback begins.
 
 Default: `3`
 
-### Safety return timeout
+### 🛟 Safety return timeout
 
 If the YouTube player never reports that playback ended, the tablet returns after this timeout.
 
 Default: `420` seconds.
 
-## First test
+## 🧪 First test
 
 After setup, open **Developer Tools → Actions** and run:
 
@@ -261,7 +261,7 @@ To restore the TV immediately while testing:
 action: prayer_hub.stop
 ```
 
-## Automatic operation
+## 🤖 Automatic operation
 
 When automatic operation is enabled, Prayer Hub watches the LUPT state.
 
@@ -277,7 +277,7 @@ It ignores other LUPT periods such as Duha and Zawaal.
 
 For automatic runs, the prayer time displayed on the tablet comes from the scheduled LUPT timestamp converted to Home Assistant local time rather than simply using the moment the event was detected.
 
-## Sensors
+## 📡 Sensors
 
 Prayer Hub creates sensors similar to:
 
@@ -290,15 +290,15 @@ Prayer Hub creates sensors similar to:
 
 Home Assistant may add a suffix if an entity with the same ID already exists.
 
-## Dashboard examples
+## 🖥️ Dashboard examples
 
-### Built-in Home Assistant card
+### 🏠 Built-in Home Assistant card
 
 A ready-to-copy example is included at:
 
 `examples/dashboard-built-in.yaml`
 
-### Bubble Card
+### 🫧 Bubble Card
 
 An optional Bubble Card example is included at:
 
@@ -306,19 +306,19 @@ An optional Bubble Card example is included at:
 
 Bubble Card is not required by Prayer Hub itself.
 
-## Themes
+## 🎨 Themes
 
 Prayer Hub includes five landscape display themes:
 
-- Fajr — dawn blue
-- Dhuhr — daylight blue
-- Asr — warm afternoon
-- Maghrib — sunset rose/amber
-- Isha — moonlit navy
+- 🌅 **Fajr** — dawn blue
+- ☀️ **Dhuhr** — daylight blue
+- 🌤️ **Asr** — warm afternoon
+- 🌇 **Maghrib** — sunset rose/amber
+- 🌙 **Isha** — moonlit navy
 
 The video switches to full-screen landscape playback after the countdown.
 
-## Qur'an reminders and du'a
+## 📖 Qur'an reminders and du'a
 
 Prayer Hub does not call an external content API.
 
@@ -340,7 +340,7 @@ The display selects content deterministically using the date and prayer name.
 
 If you edit `content.json`, keep it valid JSON and preserve the `reference`, `arabic` and `english` keys.
 
-## Privacy and security
+## 🔐 Privacy and security
 
 Prayer Hub stores configuration locally in Home Assistant.
 
@@ -355,7 +355,7 @@ Before filing GitHub issues, remove:
 - Fully Kiosk passwords
 - private device IDs
 
-## YouTube notes
+## ▶️ YouTube notes
 
 The default videos are configurable.
 
@@ -363,7 +363,7 @@ YouTube owners can change embedding permissions or remove videos at any time. Br
 
 Users are responsible for selecting media they are permitted to play and for complying with YouTube's terms.
 
-## Updating and compatibility
+## 🔄 Updating and compatibility
 
 Prayer Hub does **not** have a regular update schedule.
 
@@ -375,7 +375,7 @@ then restart Home Assistant.
 
 Your Home Assistant config entry should normally remain in place between compatible versions.
 
-### Compatibility notice
+### ⚠️ Compatibility notice
 
 This release was tested as a working snapshot of Prayer Hub at the time it was published.
 
@@ -391,7 +391,7 @@ Because Prayer Hub depends on several separate projects and services, future cha
 If the project is no longer updated, users can continue using a compatible release, fork the repository, or maintain their own version.
 
 
-## Publishing your own fork
+## 🍴 Publishing your own fork
 
 If you fork or clone this repository:
 
@@ -414,7 +414,7 @@ If you fork or clone this repository:
 
    `v2.3.2`
 
-## Creating the GitHub repository
+## 🐙 Creating the GitHub repository
 
 If you are publishing this package for the first time:
 
@@ -454,7 +454,7 @@ Do not upload everything inside an extra `prayer-hub/` directory.
 
 Other users can then install the repository through HACS as a custom integration.
 
-## HACS distribution
+## 🧩 HACS distribution
 
 Prayer Hub is designed to be installed through **HACS as a custom repository**.
 
@@ -463,7 +463,7 @@ It is not currently intended to be submitted to the default searchable HACS cata
 Users who prefer not to use HACS can install the exact same integration manually using the instructions above.
 
 
-## Support and contributions
+## 🤝 Support and contributions
 
 There is no guaranteed support response time for this project.
 
@@ -471,11 +471,11 @@ If something stops working after an upstream update, check existing GitHub issue
 
 When reporting a problem, never publish Home Assistant tokens, callback tokens, passwords or other credentials.
 
-## Licence
+## 📜 Licence
 
 MIT. See [LICENSE](LICENSE).
 
-## Credits
+## 🙏 Credits
 
 Prayer Hub relies on the wider Home Assistant ecosystem, including:
 
