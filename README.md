@@ -55,6 +55,12 @@ Each prayer has its own visual theme, Qur'an reminder and duʿā.
 
 ![Prayer Hub Maghrib display](brand/maghrib-display.png)
 
+## 🎥 Prayer Hub in action
+
+See Prayer Hub automatically transform the Home Assistant dashboard into a prayer display, play the Adhan, and return to the dashboard afterwards.
+
+[▶️ Watch the Prayer Hub demo](brand/prayer-hub-demo-github.mp4) 
+
 ## 📋 Requirements
 
 Prayer Hub currently expects:
@@ -121,7 +127,7 @@ This is the easiest method once this repository is public on GitHub.
 4. Select **Custom repositories**.
 5. Paste this repository URL:
 
-   `https://github.com/YOUR_GITHUB_USERNAME/prayer-hub`
+   `https://github.com/ebrahimflows/HA_islamic_prayer_hub`
 
 6. Choose **Integration**.
 7. Select **Add**.
